@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 
@@ -54,7 +55,10 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     
    Column(
-       modifier.fillMaxSize().padding(30.dp)
+      modifier =  modifier.fillMaxSize().padding(30.dp),
+       verticalArrangement = Arrangement.SpaceBetween,
+       horizontalAlignment = Alignment.CenterHorizontally
+
    ) {
 
        Box(modifier = modifier.size(30.dp),)
@@ -68,9 +72,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
            ),
            modifier = modifier
        )
-     Box(modifier = modifier.size(30.dp),
-
-         )
+//     Box(modifier = modifier.size(30.dp),
+//
+//         )
 
 
        Image(
@@ -84,7 +88,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Preview(
     showSystemUi = true,
-    widthDp = 600,
+    widthDp = 400,
     heightDp = 600,
     showBackground = true
 )
